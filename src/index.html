@@ -3,12 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"/>
     <link rel="stylesheet" href="styles.css" />
     <title>Homework 11</title>
   </head>
   <body>
-    <p>test</p>
-    <p>test2</p>
+    <div class="form-container">
+    <form class="search-form" id="search-form">
+      <input
+        type="text"
+        name="searchQuery"
+        autocomplete="off"
+        placeholder="Search images..."
+      />
+      <button class="submit-button"  type="submit"> 
+        <svg class="search-icon" width="25" height="25"  >
+         <use href="./icomoon/symbol-defs.svg#icon-search"></use>
+        </svg>
+     </button>
+    </form>
+  </div>
+    <div class="gallery">
+      
+      </div>
+    </div>
     <script src="index.js" type="module"></script>
   </body>
 </html>
