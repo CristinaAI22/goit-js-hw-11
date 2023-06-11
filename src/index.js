@@ -80,6 +80,8 @@ function addImagesToGallery(images) {
 function createImageCard(image) {
   const card = document.createElement('div');
   card.classList.add('photo-card');
+  const imgHolder = document.createElement('div');
+  imgHolder.classList.add('img-holder');
 
   const imageLink = document.createElement('a');
   imageLink.href = image.largeImageURL;
@@ -100,8 +102,9 @@ function createImageCard(image) {
   const downloads = createInfoItem('Downloads: ', image.downloads);
 
   info.append(likes, views, comments, downloads);
+  imgHolder.appendChild(imageLink);
   imageLink.appendChild(img);
-  card.append(imageLink, info);
+  card.append(imgHolder, info);
 
   return card;
 }
