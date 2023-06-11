@@ -15,21 +15,115 @@
   align-items: center;
   padding: 10px;
   gap: 10px;
-  border: 2px solid red;
-  background-color: palevioletred;
+  background-color: lightslategray;
+  opacity: 0.5;
+
   height: 80px;
 }
+.search-form {
+  width: 500px;
+  height: 40px;
+  margin: auto;
+  background: #444;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  border: 1px solid #fff;
+}
 input {
-  font-size: 27px;
+  width: 370px;
+  padding: 10px 5px;
+  float: left;
+  color: #ccc;
+  border: 0;
+  background: transparent;
+  border-radius: 3px 0 0 3px;
+}
+input:focus {
+  outline: 0;
+  background: transparent;
+}
+
+.submit-button {
+  position: relative;
+  float: right;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 120px;
+  color: #fff;
+  background: transparent;
+  border-left: 1px solid #fff;
+  border-radius: 0 3px 3px 0;
+}
+.submit-button:hover {
+  background: #fff;
+  color: #444;
+}
+.submit-button:active {
+  box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+}
+.submit-button:focus {
+  outline: 0;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 35px;
+  flex: 0 1 1170px;
+  margin: 15px;
+  margin-left: 25px;
+}
+
+.photo-card {
+  border: 1px solid #eeeeee;
+  max-width: 340px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  gap: 30px;
+  background-size: cover;
+  overflow: hidden;
   padding: 5px;
 }
-.submit-button {
+.photo-card:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  gap: 10px;
+}
+img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+.load-more {
+  display: none;
   padding: 7px;
   margin-top: 3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: lightslategray;
+  color: #ccc;
+  opacity: 0.8;
 }
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1 fr));
-  gap: 4px;
-  margin-top: 16px;
+.load-more:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.sl-image {
+  max-width: 300px;
 }
